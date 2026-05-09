@@ -1,3 +1,4 @@
+import 'package:bazarflow/core/widgets/custom_text.dart';
 import 'package:bazarflow/features/shared/providers/navigation_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -33,7 +34,11 @@ Future<void>_navigatetoonboarding()async{
       body: Column(
         mainAxisAlignment: .center,
         children: [
-          Center(child: Lottie.asset('assets/animations/splash.json'))
+          Center(child: Lottie.asset('assets/animations/splash.json')),
+          customText(childText: 'Bazar Flow',
+              fontSize: 40,
+              fontWeight: FontWeight.bold,
+              textColor: Colors.white)
         ],
       ),
     );

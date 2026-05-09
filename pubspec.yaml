@@ -42,6 +42,9 @@ dependencies:
   go_router: ^17.2.3
   lottie: ^3.3.3
   google_fonts: ^8.1.0
+  new_animated_button: ^1.0.5
+  bounce_tapper: ^1.1.4
+  snackbar_flutter: ^1.0.2
 
 dev_dependencies:
   flutter_test:

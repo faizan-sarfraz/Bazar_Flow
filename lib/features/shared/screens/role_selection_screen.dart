@@ -1,24 +1,19 @@
+import 'package:bazarflow/features/shared/providers/navigation_provider.dart';
 import 'package:bazarflow/features/shared/screens/onboarding_screen.dart';
 import 'package:bazarflow/features/shared/widgets/role_selection_widgets/headline_text.dart';
 import 'package:bazarflow/features/shared/widgets/role_selection_widgets/role_selector_contanier.dart';
 import 'package:bazarflow/features/shared/widgets/role_selection_widgets/sub_heading_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class roleSelectionScreen extends StatefulWidget {
+class roleSelectionScreen extends ConsumerStatefulWidget {
   const roleSelectionScreen({super.key});
 
   @override
-  State<roleSelectionScreen> createState() => _roleSelectionScreenState();
+ ConsumerState<roleSelectionScreen> createState() => _roleSelectionScreenState();
 }
 
-class _roleSelectionScreenState extends State<roleSelectionScreen> {
-  String? _selectedRoleId;
-
-  void _selectRole(String roleId) {
-    setState(() {
-      _selectedRoleId = roleId;
-    });
-  }
+class _roleSelectionScreenState extends ConsumerState<roleSelectionScreen> {
   @override
   Widget build(BuildContext context) {
 
@@ -53,8 +48,10 @@ class _roleSelectionScreenState extends State<roleSelectionScreen> {
                     iconcolor: Colors.green,
                     iconsize: 55,
                     rolename: 'Buyer',
-                    isSelected: _selectedRoleId == 'buyer',
-                    onTap: () => _selectRole('buyer'),
+
+                    onTap: () {
+
+                    }
 
 
                   ),
@@ -65,8 +62,10 @@ class _roleSelectionScreenState extends State<roleSelectionScreen> {
                     iconcolor: Colors.blue,
                     iconsize: 55,
                     rolename: 'Seller',
-                    isSelected: _selectedRoleId == 'Seller',
-                    onTap: () => _selectRole('Seller'),
+
+                    onTap: () {
+                      ref.read(routerProvider).push('/signinscreen');
+                    },
 
                   ),
                   roleSelectorContainer(
@@ -76,8 +75,8 @@ class _roleSelectionScreenState extends State<roleSelectionScreen> {
                     iconcolor: Colors.orange,
                     iconsize: 55,
                     rolename: 'Rider',
-                    isSelected: _selectedRoleId == 'Rider',
-                    onTap: () => _selectRole('Rider'),
+
+                    onTap: () {},
 
                   ),
                   roleSelectorContainer(
@@ -87,8 +86,10 @@ class _roleSelectionScreenState extends State<roleSelectionScreen> {
                     iconcolor: Colors.teal,
                     iconsize: 55,
                     rolename: 'Admin',
-                    isSelected: _selectedRoleId == 'Admin',
-                    onTap: () => _selectRole('Admin'),
+
+                    onTap: (){
+
+                    },
                   ),
 
 
