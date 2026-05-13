@@ -3,6 +3,7 @@ import 'package:bazarflow/features/auth/screens/signup_screen.dart';
 import 'package:bazarflow/features/shared/screens/onboarding_screen.dart';
 import 'package:bazarflow/features/shared/screens/role_selection_screen.dart';
 import 'package:bazarflow/features/shared/screens/splash_screen.dart';
+import 'package:bazarflow/features/store_manager/screens/bottom_nav_screen.dart';
 import 'package:bazarflow/features/store_manager/screens/home_screen.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod/riverpod.dart';
@@ -44,6 +45,12 @@ final routerProvider=Provider<GoRouter>((ref){
         path: '/sellerHomeScreen',
         name: 'sellerHomeScreen',
         builder: (context, state) => const sellerHomeScreen(),
+
+      ),
+      GoRoute(
+        path: '/mainscreen',
+        name: 'mainscreen',
+        builder: (context, state) => const bottomNavScreen(),
 
       ),
     ],
