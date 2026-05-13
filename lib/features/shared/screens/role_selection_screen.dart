@@ -1,5 +1,4 @@
 import 'package:bazarflow/features/shared/providers/navigation_provider.dart';
-import 'package:bazarflow/features/shared/screens/onboarding_screen.dart';
 import 'package:bazarflow/features/shared/widgets/role_selection_widgets/headline_text.dart';
 import 'package:bazarflow/features/shared/widgets/role_selection_widgets/role_selector_contanier.dart';
 import 'package:bazarflow/features/shared/widgets/role_selection_widgets/sub_heading_text.dart';
